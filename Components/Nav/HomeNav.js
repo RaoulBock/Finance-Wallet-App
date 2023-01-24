@@ -9,7 +9,6 @@ const HomeNav = ({ username }) => {
         <Text style={styles.text}>Good Morning,</Text>
         <Text style={styles.title}>{username}</Text>
       </View>
-      <View></View>
     </View>
   );
 };
@@ -19,6 +18,7 @@ export default HomeNav;
 const styles = StyleSheet.create({
   outline: {
     flexDirection: "row",
+    paddingHorizontal: 15,
   },
   text: {
     color: COLORS.SUB_TEXT_COLOR,

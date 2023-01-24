@@ -13,3 +13,16 @@ export const COLORS = {
   LOSE_COLOR: "#fc6d77",
   GAIN_COLOR: "#4cdbb5",
 };
+
+export const WALLETS = [
+  {
+    id: 1,
+    name: "ETH",
+    amount: "2534",
+  },
+  {
+    id: 2,
+    name: "VISA",
+    amount: "192",
+  },
+];

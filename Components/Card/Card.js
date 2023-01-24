@@ -3,7 +3,7 @@ import React from "react";
 import { LinearGradient } from "expo-linear-gradient";
 import { COLORS } from "../../Context/settings";
 
-const Card = ({ amount, change }) => {
+const Card = ({ item }) => {
   return (
     <LinearGradient
       // Button Linear Gradient
@@ -13,12 +13,12 @@ const Card = ({ amount, change }) => {
       style={styles.outline}
     >
       <View style={{ flex: 1 }}>
-        <Text style={styles.title}>Visa</Text>
+        <Text style={styles.title}>{item.name}</Text>
       </View>
       <View style={styles.grid}>
         <Text style={styles.text}>$</Text>
-        <Text style={styles.title}>{amount}</Text>
-        <Text style={styles.text}>.{change}</Text>
+        <Text style={styles.title}>{item.amount}</Text>
+        <Text style={styles.text}>.{item.change}</Text>
       </View>
       <View style={{ marginVertical: 6 }}>
         <Text style={styles.text}>•••• •••• •••• 9896</Text>
@@ -32,8 +32,10 @@ export default Card;
 const styles = StyleSheet.create({
   outline: {
     height: 200,
-    borderRadius: 10,
+    borderRadius: 15,
     padding: 20,
+    width: 300,
+    marginHorizontal: 10,
   },
   grid: {
     flexDirection: "row",
