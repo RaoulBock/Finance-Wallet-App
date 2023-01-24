@@ -1,6 +1,6 @@
 import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import React from "react";
-import { COLORS } from "../../Context/settings";
+import { APP_ICONS, COLORS } from "../../Context/settings";
 import { AppContext } from "../../Context/AppContext";
 
 const HomeNav = ({ username }) => {
@@ -12,8 +12,8 @@ const HomeNav = ({ username }) => {
         <Text style={styles.title}>{username}</Text>
       </View>
       <View>
-        <TouchableOpacity onPress={() => setTab(4)}>
-          <Image source={require("../Icons/setting.png")} style={styles.img} />
+        <TouchableOpacity onPress={() => setTab(4)} style={styles.btn}>
+          <Text>{APP_ICONS.SEARCH}</Text>
         </TouchableOpacity>
       </View>
     </View>
@@ -42,5 +42,11 @@ const styles = StyleSheet.create({
   img: {
     width: 25,
     height: 25
+  },
+  btn: {
+    backgroundColor: COLORS.BACKGROUND_ICON,
+    borderRadius: 10,
+    backgroundColor: COLORS.BACKGROUND_ICON,
+    padding: 10
   }
 });

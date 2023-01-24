@@ -35,8 +35,8 @@ const HomeScreen = () => {
         {tab === 0 && <HomeView />}
         {tab === 1 && <HistoryView />}
         {tab === 2 && <ContactView />}
-        {tab === 3 && <SearchView />}
-        {tab === 4 && <SettingsView />}
+        {tab === 3 && <SettingsView />}
+        {tab === 4 && <SearchView />}
       </ScrollView>
       <BottomNav />
     </View>

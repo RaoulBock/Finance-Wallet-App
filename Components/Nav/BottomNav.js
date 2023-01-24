@@ -34,10 +34,12 @@ const BottomNav = () => {
 
       <TouchableOpacity style={styles.grid} onPress={() => setTab(3)}>
         <Ionicons
-          name={"ios-qr-code-outline"}
+          name={"ios-settings-outline"}
           style={[tab === 3 ? styles.isActive : styles.text, { fontSize: 21 }]}
         />
-        <Text style={[tab === 3 ? styles.isActive : styles.text]}>Share</Text>
+        <Text style={[tab === 3 ? styles.isActive : styles.text]}>
+          Settings
+        </Text>
       </TouchableOpacity>
     </View>
   );
@@ -69,5 +71,9 @@ const styles = StyleSheet.create({
     color: COLORS.VIEW_MORE_COLOR,
     fontWeight: "600",
     fontSize: 14
+  },
+  img: {
+    width: 25,
+    height: 25
   }
 });
