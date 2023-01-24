@@ -22,12 +22,16 @@ import TransactionCard from "../Components/Card/TransactionCard";
 import BottomNav from "../Components/Nav/BottomNav";
 import HomeView from "../Components/Views/HomeView";
 import { AppContext } from "../Context/AppContext";
+import HistoryView from "../Components/Views/HistoryView";
 
 const HomeScreen = () => {
   const { tab } = React.useContext(AppContext);
   return (
     <View style={styles.outline}>
-      <ScrollView>{tab === 0 && <HomeView />}</ScrollView>
+      <ScrollView>
+        {tab === 0 && <HomeView />}
+        {tab === 1 && <HistoryView />}
+      </ScrollView>
       <BottomNav />
     </View>
   );
