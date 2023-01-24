@@ -1,10 +1,19 @@
 import { StyleSheet, Text, View } from "react-native";
 import React from "react";
+import { COLORS } from "../../Context/settings";
+import TransactionCard from "../Card/TransactionCard";
 
-const Modal = ({ title }) => {
+const Modal = ({ title, dataset }) => {
   return (
     <View style={styles.outline}>
-      <Text>{title}</Text>
+      <Text style={styles.title}>{title}</Text>
+      {dataset && (
+        <View>
+          {dataset.map((e, i) => {
+            return <TransactionCard key={i} item={e} />;
+          })}
+        </View>
+      )}
     </View>
   );
 };
@@ -19,6 +28,13 @@ const styles = StyleSheet.create({
     borderTopLeftRadius: 20,
     height: 450,
     bottom: 0,
-    position: "absolute"
+    position: "absolute",
+    paddingVertical: 20
+  },
+  title: {
+    color: COLORS.SUB_TEXT_COLOR,
+    textAlign: "center",
+    fontWeight: "600",
+    fontSize: 22
   }
 });

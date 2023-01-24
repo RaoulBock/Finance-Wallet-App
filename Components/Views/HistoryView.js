@@ -2,6 +2,7 @@ import { StyleSheet, Text, View, Dimensions } from "react-native";
 import React from "react";
 import { LinearGradient } from "expo-linear-gradient";
 import Modal from "../Modal/Modal";
+import { TRANSACTIONS } from "../../Context/settings";
 
 const windowWidth = Dimensions.get("window").width;
 const windowHeight = Dimensions.get("window").height;
@@ -17,7 +18,7 @@ const HistoryView = () => {
     >
       <Text>hi</Text>
 
-      <Modal title={"Today"} />
+      <Modal title={"Today"} dataset={TRANSACTIONS} />
     </LinearGradient>
   );
 };
