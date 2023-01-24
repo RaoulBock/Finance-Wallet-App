@@ -23,9 +23,11 @@ const styles = StyleSheet.create({
   text: {
     color: COLORS.SUB_TEXT_COLOR,
     fontSize: COLORS.SUB_FONT_SIZE,
+    fontWeight: "500",
   },
   title: {
     color: COLORS.MAIN_COLOR,
     fontSize: COLORS.MAIN_FONT_SIZE,
+    fontWeight: "700",
   },
 });

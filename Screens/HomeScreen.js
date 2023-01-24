@@ -16,5 +16,7 @@ const styles = StyleSheet.create({
   outline: {
     flex: 1,
     paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
+    paddingHorizontal: 15,
+    marginVertical: 10,
   },
 });
