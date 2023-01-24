@@ -1,7 +1,7 @@
 import React from "react";
 import { StatusBar } from "react-native";
 import AppProvider, { AppContext } from "./Context/AppContext";
-import { APP_PAGES } from "./Context/settings";
+import { APP_PAGES, COLORS } from "./Context/settings";
 import HomeScreen from "./Screens/HomeScreen";
 
 function App() {
@@ -27,7 +27,7 @@ const NavWrapper = () => {
       <StatusBar
         style="dark"
         barStyle={"dark-content"}
-        backgroundColor="#fff"
+        backgroundColor={COLORS.BACKGROUND}
         hidden={false}
         translucent={true}
       />
