@@ -23,7 +23,7 @@ const SettingsView = () => {
   const [isEnabled, setIsEnabled] = React.useState(false);
   const toggleSwitch = () => setIsEnabled((previousState) => !previousState);
   const [isModalVisible, setIsModalVisible] = React.useState(false);
-  const { currency } = React.useContext(AppContext);
+  const { currency: item } = React.useContext(AppContext);
   return (
     <View>
       <HomeNav username={"Raoul Bock"} />
@@ -54,7 +54,7 @@ const SettingsView = () => {
           >
             <Text style={styles.title}>App Preferences</Text>
             <TouchableOpacity>
-              <Text style={styles.text}>{currency}</Text>
+              <Text style={styles.text}>{item.name}</Text>
             </TouchableOpacity>
           </TouchableOpacity>
           <Modal
