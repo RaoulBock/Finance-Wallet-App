@@ -24,6 +24,8 @@ import HomeView from "../Components/Views/HomeView";
 import { AppContext } from "../Context/AppContext";
 import HistoryView from "../Components/Views/HistoryView";
 import ContactView from "../Components/Views/ContactView";
+import SearchView from "../Components/Views/SearchView";
+import SettingsView from "../Components/Views/SettingsView";
 
 const HomeScreen = () => {
   const { tab } = React.useContext(AppContext);
@@ -33,6 +35,8 @@ const HomeScreen = () => {
         {tab === 0 && <HomeView />}
         {tab === 1 && <HistoryView />}
         {tab === 2 && <ContactView />}
+        {tab === 3 && <SearchView />}
+        {tab === 4 && <SettingsView />}
       </ScrollView>
       <BottomNav />
     </View>

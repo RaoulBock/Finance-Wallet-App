@@ -1,8 +1,10 @@
 import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import React from "react";
 import { COLORS } from "../../Context/settings";
+import { AppContext } from "../../Context/AppContext";
 
 const HomeNav = ({ username }) => {
+  const { setTab } = React.useContext(AppContext);
   return (
     <View style={styles.outline}>
       <View>
@@ -10,7 +12,7 @@ const HomeNav = ({ username }) => {
         <Text style={styles.title}>{username}</Text>
       </View>
       <View>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => setTab(4)}>
           <Image source={require("../Icons/setting.png")} style={styles.img} />
         </TouchableOpacity>
       </View>
