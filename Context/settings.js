@@ -95,12 +95,27 @@ export const TRANSACTIONS = [
   }
 ];
 
+export const USER = [
+  {
+    id: 1,
+    name: "Raoul Bock",
+    account_number: "•••• 7890",
+    img: "https://media.npr.org/assets/img/2022/11/08/ap22312071681283-0d9c328f69a7c7f15320e8750d6ea447532dff66.jpg"
+  }
+];
+
 import { Ionicons } from "react-native-vector-icons";
 export const APP_ICONS = {
   ADD: (
     <Ionicons
       name={"ios-add-outline"}
       style={{ color: "#3071f5", fontSize: 28 }}
+    />
+  ),
+  CALENDER: (
+    <Ionicons
+      name={"ios-calendar-outline"}
+      style={{ color: "#fff", fontSize: 28 }}
     />
   )
 };
