@@ -57,13 +57,17 @@ export const TRANSACTIONS = [
     id: 1,
     name: "Nike Shop",
     description: "Clothing and Footware",
-    icon: require("../Components/Icons/nike.png")
+    icon: require("../Components/Icons/nike.png"),
+    price: "-142.60",
+    timeStamp: "30 min"
   },
   {
     id: 2,
     name: "McDonald's",
     description: "Cafes and Restaurants",
-    icon: require("../Components/Icons/mcdonalds.png")
+    icon: require("../Components/Icons/mcdonalds.png"),
+    price: "-14.60",
+    timeStamp: "1 hour ago"
   }
 ];
 

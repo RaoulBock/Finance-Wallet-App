@@ -5,10 +5,24 @@ import { COLORS } from "../../Context/settings";
 const TransactionCard = ({ item }) => {
   return (
     <View style={styles.outline}>
-      <Image source={item.icon} style={styles.icon} />
+      <View style={styles.main}>
+        <Image source={item.icon} style={styles.icon} />
+        <View style={styles.grid}>
+          <Text style={styles.title}>{item.name}</Text>
+          <Text style={styles.description}>{item.description}</Text>
+        </View>
+      </View>
       <View style={styles.grid}>
-        <Text style={styles.title}>{item.name}</Text>
-        <Text style={styles.description}>{item.description}</Text>
+        <Text
+          style={
+            item.price < 1
+              ? [styles.title, { color: "red" }]
+              : [styles.title, { color: "#10ac84" }]
+          }
+        >
+          {item.price}
+        </Text>
+        <Text style={styles.description}>{item.timeStamp}</Text>
       </View>
     </View>
   );
@@ -21,7 +35,8 @@ const styles = StyleSheet.create({
     marginHorizontal: 10,
     marginVertical: 10,
     flexDirection: "row",
-    alignItems: "center"
+    alignItems: "center",
+    justifyContent: "space-between"
   },
   icon: {
     width: 20,
@@ -41,5 +56,9 @@ const styles = StyleSheet.create({
   description: {
     color: COLORS.SUB_TEXT_COLOR,
     fontWeight: "500"
+  },
+  main: {
+    flexDirection: "row",
+    alignItems: "center"
   }
 });
