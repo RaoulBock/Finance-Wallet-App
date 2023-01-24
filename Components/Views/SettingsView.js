@@ -17,11 +17,13 @@ import {
 } from "../../Context/settings";
 import TransactionCard from "../Card/TransactionCard";
 import List from "../List/List";
+import { AppContext } from "../../Context/AppContext";
 
 const SettingsView = () => {
   const [isEnabled, setIsEnabled] = React.useState(false);
   const toggleSwitch = () => setIsEnabled((previousState) => !previousState);
   const [isModalVisible, setIsModalVisible] = React.useState(false);
+  const { currency } = React.useContext(AppContext);
   return (
     <View>
       <HomeNav username={"Raoul Bock"} />
@@ -52,7 +54,7 @@ const SettingsView = () => {
           >
             <Text style={styles.title}>App Preferences</Text>
             <TouchableOpacity>
-              <Text style={styles.text}>NAM</Text>
+              <Text style={styles.text}>{currency}</Text>
             </TouchableOpacity>
           </TouchableOpacity>
           <Modal

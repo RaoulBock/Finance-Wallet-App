@@ -9,6 +9,7 @@ export const AppContext = React.createContext({
 const AppProvider = ({ children }) => {
   const [navPage, setNavPage] = React.useState(APP_PAGES.APP.HOME);
   const [tab, setTab] = React.useState(0);
+  const [currency, setCurrency] = React.useState("USD");
 
   return (
     <AppContext.Provider
@@ -16,7 +17,9 @@ const AppProvider = ({ children }) => {
         navPage,
         setNavPage,
         tab,
-        setTab
+        setTab,
+        currency,
+        setCurrency
       }}
     >
       {children}
