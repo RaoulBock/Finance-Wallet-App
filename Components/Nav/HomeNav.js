@@ -25,7 +25,7 @@ export default HomeNav;
 const styles = StyleSheet.create({
   outline: {
     flexDirection: "row",
-    paddingHorizontal: 15,
+    paddingHorizontal: 10,
     alignItems: "center",
     justifyContent: "space-between"
   },
