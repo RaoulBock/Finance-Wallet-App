@@ -15,7 +15,7 @@ export default List;
 const styles = StyleSheet.create({
   title: {
     color: COLORS.MAIN_COLOR,
-    fontSize: COLORS.MAIN_FONT_SIZE,
+    fontSize: 20,
     fontWeight: "700",
     borderBottomColor: "#eee",
     borderBottomWidth: 1,
