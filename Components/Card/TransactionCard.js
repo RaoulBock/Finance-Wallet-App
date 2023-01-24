@@ -33,7 +33,7 @@ export default TransactionCard;
 const styles = StyleSheet.create({
   outline: {
     marginHorizontal: 10,
-    marginVertical: 10,
+    marginVertical: 12,
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between"

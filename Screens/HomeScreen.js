@@ -35,7 +35,7 @@ const HomeScreen = () => {
           })}
         </ScrollView>
       </View>
-      <View style={{ marginBottom: 25 }}>
+      <View style={{ marginBottom: 15 }}>
         <View style={styles.grid}>
           <Text style={styles.text}>Send money</Text>
           {/* <Text style={[styles.text, { color: COLORS.VIEW_MORE_COLOR }]}>
