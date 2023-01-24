@@ -117,5 +117,11 @@ export const APP_ICONS = {
       name={"ios-calendar-outline"}
       style={{ color: "#fff", fontSize: 28 }}
     />
+  ),
+  SEARCH: (
+    <Ionicons
+      name={"ios-search-outline"}
+      style={{ color: "#3071f5", fontSize: 28 }}
+    />
   )
 };
