@@ -19,12 +19,14 @@ export default SearchInput;
 
 const styles = StyleSheet.create({
   outline: {
-    backgroundColor: "red",
+    backgroundColor: "#eee",
     flexDirection: "row",
-    alignItems: "center"
+    alignItems: "center",
+    paddingHorizontal: 10,
+    marginVertical: 10
   },
   input: {
-    backgroundColor: "yellow",
+    backgroundColor: "#eee",
     width: "100%",
     padding: 10
   }

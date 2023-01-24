@@ -104,6 +104,21 @@ export const USER = [
   }
 ];
 
+export const RECENT_SENT = [
+  {
+    id: 1,
+    img: "https://assets1.cbsnewsstatic.com/hub/i/2018/11/06/0c1af1b8-155a-458e-b105-78f1e7344bf4/2018-11-06t054310z-1334124005-rc1be15a8050-rtrmadp-3-people-sexiest-man.jpg"
+  },
+  {
+    id: 2,
+    img: "https://media.npr.org/assets/img/2022/11/08/ap22312071681283-0d9c328f69a7c7f15320e8750d6ea447532dff66.jpg"
+  },
+  {
+    id: 3,
+    img: "https://cdn2.psychologytoday.com/assets/styles/manual_crop_1_91_1_1528x800/public/field_blog_entry_images/2017-09/shutterstock_243101992.jpg"
+  }
+];
+
 import { Ionicons } from "react-native-vector-icons";
 export const APP_ICONS = {
   ADD: (
