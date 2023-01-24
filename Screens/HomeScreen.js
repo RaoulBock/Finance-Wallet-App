@@ -19,6 +19,7 @@ import {
 } from "../Context/settings";
 import PeopleCard from "../Components/Card/PeopleCard";
 import TransactionCard from "../Components/Card/TransactionCard";
+import BottomNav from "../Components/Nav/BottomNav";
 
 const HomeScreen = () => {
   return (
@@ -64,6 +65,7 @@ const HomeScreen = () => {
           </ScrollView>
         </View>
       </ScrollView>
+      <BottomNav />
     </View>
   );
 };
