@@ -107,15 +107,33 @@ export const USER = [
 export const RECENT_SENT = [
   {
     id: 1,
-    img: "https://assets1.cbsnewsstatic.com/hub/i/2018/11/06/0c1af1b8-155a-458e-b105-78f1e7344bf4/2018-11-06t054310z-1334124005-rc1be15a8050-rtrmadp-3-people-sexiest-man.jpg"
+    img: "https://assets1.cbsnewsstatic.com/hub/i/2018/11/06/0c1af1b8-155a-458e-b105-78f1e7344bf4/2018-11-06t054310z-1334124005-rc1be15a8050-rtrmadp-3-people-sexiest-man.jpg",
+    name: "Estelle Mendez",
+    email: "derholeto@ti.org"
   },
   {
     id: 2,
-    img: "https://media.npr.org/assets/img/2022/11/08/ap22312071681283-0d9c328f69a7c7f15320e8750d6ea447532dff66.jpg"
+    img: "https://media.npr.org/assets/img/2022/11/08/ap22312071681283-0d9c328f69a7c7f15320e8750d6ea447532dff66.jpg",
+    name: "Ernest Garett",
+    email: "abce@zoez.com"
   },
   {
     id: 3,
-    img: "https://cdn2.psychologytoday.com/assets/styles/manual_crop_1_91_1_1528x800/public/field_blog_entry_images/2017-09/shutterstock_243101992.jpg"
+    img: "https://cdn2.psychologytoday.com/assets/styles/manual_crop_1_91_1_1528x800/public/field_blog_entry_images/2017-09/shutterstock_243101992.jpg",
+    name: "Sophia Mendoza",
+    email: "diodedan@kib.com"
+  },
+  {
+    id: 4,
+    img: "https://static.independent.co.uk/s3fs-public/thumbnails/image/2017/09/27/08/jennifer-lawrence.jpg",
+    name: "Howard Rodriquex",
+    email: "gepjune@cojo.com.uk"
+  },
+  {
+    id: 5,
+    img: "https://helpfulprofessor.com/wp-content/uploads/2022/10/French-woman-e1667050422125-1024x683.jpg",
+    name: "Ernest Garett",
+    email: "abce@zoez.com"
   }
 ];
 

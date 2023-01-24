@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     paddingHorizontal: 10,
-    marginVertical: 20
+    marginVertical: 10
   },
   input: {
     backgroundColor: "#eee",
