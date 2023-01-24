@@ -18,7 +18,7 @@ const Card = ({ item }) => {
       <View style={styles.grid}>
         <Text style={styles.text}>$</Text>
         <Text style={styles.title}>{item.amount}</Text>
-        <Text style={styles.text}>.{item.change}</Text>
+        <Text style={styles.text}>.65</Text>
       </View>
       <View style={{ marginVertical: 6 }}>
         <Text style={styles.text}>•••• •••• •••• 9896</Text>

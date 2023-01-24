@@ -4,10 +4,12 @@ import { COLORS, PEOPLE, TRANSACTIONS, WALLETS } from "../../Context/settings";
 import Card from "../Card/Card";
 import PeopleCard from "../Card/PeopleCard";
 import TransactionCard from "../Card/TransactionCard";
+import HomeNav from "../Nav/HomeNav";
 
 const HomeView = () => {
   return (
     <View>
+      <HomeNav username={"Raoul Bock"} />
       <View style={{ marginVertical: 25 }}>
         <ScrollView
           horizontal

@@ -27,10 +27,7 @@ const HomeScreen = () => {
   const { tab } = React.useContext(AppContext);
   return (
     <View style={styles.outline}>
-      <ScrollView>
-        <HomeNav username={"Raoul Bock"} />
-        {tab === 0 && <HomeView />}
-      </ScrollView>
+      <ScrollView>{tab === 0 && <HomeView />}</ScrollView>
       <BottomNav />
     </View>
   );
