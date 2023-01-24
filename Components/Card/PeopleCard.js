@@ -14,9 +14,9 @@ export default PeopleCard;
 const styles = StyleSheet.create({
   img: {
     width: 60,
-    height: 90,
+    height: 60,
     borderRadius: 50,
     marginHorizontal: 10,
-    marginVertical: 10
+    marginVertical: 15
   }
 });

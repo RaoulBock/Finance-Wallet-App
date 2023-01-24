@@ -4,12 +4,13 @@ import {
   View,
   Platform,
   StatusBar,
-  ScrollView
+  ScrollView,
+  TouchableOpacity
 } from "react-native";
 import React from "react";
 import HomeNav from "../Components/Nav/HomeNav";
 import Card from "../Components/Card/Card";
-import { COLORS, PEOPLE, WALLETS } from "../Context/settings";
+import { APP_ICONS, COLORS, PEOPLE, WALLETS } from "../Context/settings";
 import PeopleCard from "../Components/Card/PeopleCard";
 
 const HomeScreen = () => {
@@ -28,8 +29,13 @@ const HomeScreen = () => {
         </ScrollView>
       </View>
       <View style={{ marginHorizontal: 10 }}>
-        <Text style={styles.text}>Send money</Text>
-        <ScrollView horizontal>
+        <View style={styles.grid}>
+          <Text style={styles.text}>Send money</Text>
+          <Text style={[styles.text, { color: COLORS.VIEW_MORE_COLOR }]}>
+            View all
+          </Text>
+        </View>
+        <ScrollView horizontal showsHorizontalScrollIndicator={false}>
           {PEOPLE.map((e, i) => {
             return <PeopleCard key={i} item={e} />;
           })}
@@ -49,6 +55,12 @@ const styles = StyleSheet.create({
   },
   text: {
     color: COLORS.SUB_TEXT_COLOR,
-    fontSize: COLORS.SUB_FONT_SIZE
+    fontSize: COLORS.SUB_FONT_SIZE,
+    fontWeight: "600"
+  },
+  grid: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between"
   }
 });
