@@ -137,6 +137,25 @@ export const RECENT_SENT = [
   }
 ];
 
+export const CURRENCIES = [
+  {
+    id: 1,
+    name: "USD"
+  },
+  {
+    id: 2,
+    name: "EUR"
+  },
+  {
+    id: 3,
+    name: "GBP"
+  },
+  {
+    id: 4,
+    name: "NAM"
+  }
+];
+
 import { Ionicons } from "react-native-vector-icons";
 export const APP_ICONS = {
   ADD: (
@@ -154,6 +173,12 @@ export const APP_ICONS = {
   SEARCH: (
     <Ionicons
       name={"ios-search-outline"}
+      style={{ color: "#3071f5", fontSize: 28 }}
+    />
+  ),
+  EXIT: (
+    <Ionicons
+      name={"ios-close-outline"}
       style={{ color: "#3071f5", fontSize: 28 }}
     />
   )

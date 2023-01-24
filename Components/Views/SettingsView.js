@@ -9,8 +9,14 @@ import {
 } from "react-native";
 import React from "react";
 import HomeNav from "../Nav/HomeNav";
-import { COLORS, TRANSACTIONS } from "../../Context/settings";
+import {
+  APP_ICONS,
+  COLORS,
+  CURRENCIES,
+  TRANSACTIONS
+} from "../../Context/settings";
 import TransactionCard from "../Card/TransactionCard";
+import List from "../List/List";
 
 const SettingsView = () => {
   const [isEnabled, setIsEnabled] = React.useState(false);
@@ -48,13 +54,19 @@ const SettingsView = () => {
             onRequestClose={() => setIsModalVisible(false)}
             style={{ height: 200 }}
           >
-            <View style={{}}>
-              <View>
-                <Text>Hello World!</Text>
-                <TouchableOpacity onPress={() => setIsModalVisible(false)}>
-                  <Text>Hide Modal</Text>
+            <View style={{ margin: 15 }}>
+              <View style={styles.main}>
+                <Text style={styles.text}>Select your preferred currency</Text>
+                <TouchableOpacity
+                  style={styles.btn}
+                  onPress={() => setIsModalVisible(false)}
+                >
+                  <Text>{APP_ICONS.EXIT}</Text>
                 </TouchableOpacity>
               </View>
+              {CURRENCIES.map((e, i) => {
+                return <List key={i} item={e} />;
+              })}
             </View>
           </Modal>
         </ScrollView>
@@ -85,5 +97,16 @@ const styles = StyleSheet.create({
   sep: {
     borderBottomWidth: 1,
     borderBottomColor: "#eee"
+  },
+  main: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between"
+  },
+  btn: {
+    backgroundColor: COLORS.BACKGROUND_ICON,
+    borderRadius: 10,
+    backgroundColor: COLORS.BACKGROUND_ICON,
+    padding: 10
   }
 });
