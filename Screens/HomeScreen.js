@@ -24,44 +24,46 @@ const HomeScreen = () => {
   return (
     <View style={styles.outline}>
       <HomeNav username={"Raoul Bock"} />
-      <View style={{ marginVertical: 25 }}>
-        <ScrollView
-          horizontal
-          showsHorizontalScrollIndicator={false}
-          pagingEnabled
-        >
-          {WALLETS.map((e, i) => {
-            return <Card key={i} item={e} />;
-          })}
-        </ScrollView>
-      </View>
-      <View style={{ marginBottom: 15 }}>
-        <View style={styles.grid}>
-          <Text style={styles.text}>Send money</Text>
-          {/* <Text style={[styles.text, { color: COLORS.VIEW_MORE_COLOR }]}>
+      <ScrollView>
+        <View style={{ marginVertical: 25 }}>
+          <ScrollView
+            horizontal
+            showsHorizontalScrollIndicator={false}
+            pagingEnabled
+          >
+            {WALLETS.map((e, i) => {
+              return <Card key={i} item={e} />;
+            })}
+          </ScrollView>
+        </View>
+        <View style={{ marginBottom: 15 }}>
+          <View style={styles.grid}>
+            <Text style={styles.text}>Send money</Text>
+            {/* <Text style={[styles.text, { color: COLORS.VIEW_MORE_COLOR }]}>
             View all
           </Text> */}
+          </View>
+          <ScrollView horizontal showsHorizontalScrollIndicator={false}>
+            {PEOPLE.map((e, i) => {
+              return <PeopleCard key={i} item={e} />;
+            })}
+          </ScrollView>
         </View>
-        <ScrollView horizontal showsHorizontalScrollIndicator={false}>
-          {PEOPLE.map((e, i) => {
-            return <PeopleCard key={i} item={e} />;
-          })}
-        </ScrollView>
-      </View>
 
-      <View style={{}}>
-        <View style={styles.grid}>
-          <Text style={styles.text}>Transactions</Text>
-          <Text style={[styles.text, { color: COLORS.VIEW_MORE_COLOR }]}>
-            View all
-          </Text>
+        <View style={{}}>
+          <View style={styles.grid}>
+            <Text style={styles.text}>Transactions</Text>
+            <Text style={[styles.text, { color: COLORS.VIEW_MORE_COLOR }]}>
+              View all
+            </Text>
+          </View>
+          <ScrollView>
+            {TRANSACTIONS.map((e, i) => {
+              return <TransactionCard key={i} item={e} />;
+            })}
+          </ScrollView>
         </View>
-        <ScrollView>
-          {TRANSACTIONS.map((e, i) => {
-            return <TransactionCard key={i} item={e} />;
-          })}
-        </ScrollView>
-      </View>
+      </ScrollView>
     </View>
   );
 };
@@ -71,8 +73,7 @@ export default HomeScreen;
 const styles = StyleSheet.create({
   outline: {
     flex: 1,
-    paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
-    marginVertical: 10
+    paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0
   },
   text: {
     color: COLORS.SUB_TEXT_COLOR,

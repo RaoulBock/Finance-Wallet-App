@@ -76,6 +76,22 @@ export const TRANSACTIONS = [
     icon: require("../Components/Icons/mcdonalds.png"),
     price: "-1.60",
     timeStamp: "2 hour ago"
+  },
+  {
+    id: 4,
+    name: "McDonald's",
+    description: "Cafes and Restaurants",
+    icon: require("../Components/Icons/paypal.png"),
+    price: "500.60",
+    timeStamp: "2 hour ago"
+  },
+  {
+    id: 5,
+    name: "Apple",
+    description: "Mobile and Cell Phone Services",
+    icon: require("../Components/Icons/apple.png"),
+    price: "132.60",
+    timeStamp: "2 hour ago"
   }
 ];
 
