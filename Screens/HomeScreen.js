@@ -20,51 +20,15 @@ import {
 import PeopleCard from "../Components/Card/PeopleCard";
 import TransactionCard from "../Components/Card/TransactionCard";
 import BottomNav from "../Components/Nav/BottomNav";
+import HomeView from "../Components/Views/HomeView";
+import { AppContext } from "../Context/AppContext";
 
 const HomeScreen = () => {
+  const { tab } = React.useContext(AppContext);
   return (
     <View style={styles.outline}>
       <HomeNav username={"Raoul Bock"} />
-      <ScrollView>
-        <View style={{ marginVertical: 25 }}>
-          <ScrollView
-            horizontal
-            showsHorizontalScrollIndicator={false}
-            pagingEnabled
-          >
-            {WALLETS.map((e, i) => {
-              return <Card key={i} item={e} />;
-            })}
-          </ScrollView>
-        </View>
-        <View style={{ marginBottom: 15 }}>
-          <View style={styles.grid}>
-            <Text style={styles.text}>Send money</Text>
-            {/* <Text style={[styles.text, { color: COLORS.VIEW_MORE_COLOR }]}>
-            View all
-          </Text> */}
-          </View>
-          <ScrollView horizontal showsHorizontalScrollIndicator={false}>
-            {PEOPLE.map((e, i) => {
-              return <PeopleCard key={i} item={e} />;
-            })}
-          </ScrollView>
-        </View>
-
-        <View style={{}}>
-          <View style={styles.grid}>
-            <Text style={styles.text}>Transactions</Text>
-            <Text style={[styles.text, { color: COLORS.VIEW_MORE_COLOR }]}>
-              View all
-            </Text>
-          </View>
-          <ScrollView>
-            {TRANSACTIONS.map((e, i) => {
-              return <TransactionCard key={i} item={e} />;
-            })}
-          </ScrollView>
-        </View>
-      </ScrollView>
+      <ScrollView>{tab === 0 && <HomeView />}</ScrollView>
       <BottomNav />
     </View>
   );
@@ -75,17 +39,7 @@ export default HomeScreen;
 const styles = StyleSheet.create({
   outline: {
     flex: 1,
-    paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0
-  },
-  text: {
-    color: COLORS.SUB_TEXT_COLOR,
-    fontSize: COLORS.SUB_FONT_SIZE,
-    fontWeight: "600"
-  },
-  grid: {
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "space-between",
-    marginHorizontal: 10
+    paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
+    backgroundColor: "#fdfdfd"
   }
 });
