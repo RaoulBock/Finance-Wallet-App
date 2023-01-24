@@ -29,7 +29,8 @@ const styles = StyleSheet.create({
     height: 450,
     bottom: 0,
     position: "absolute",
-    paddingVertical: 20
+    paddingVertical: 20,
+    elevation: 10
   },
   title: {
     color: COLORS.SUB_TEXT_COLOR,

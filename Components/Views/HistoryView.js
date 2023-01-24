@@ -2,7 +2,7 @@ import { StyleSheet, Text, View, Dimensions } from "react-native";
 import React from "react";
 import { LinearGradient } from "expo-linear-gradient";
 import Modal from "../Modal/Modal";
-import { TRANSACTIONS, USER } from "../../Context/settings";
+import { COLORS, TRANSACTIONS, USER } from "../../Context/settings";
 import HistoryUserCard from "../Card/HistoryUserCard";
 
 const windowWidth = Dimensions.get("window").width;
@@ -21,6 +21,15 @@ const HistoryView = () => {
         return <HistoryUserCard key={i} item={e} />;
       })}
 
+      <View style={{ alignItems: "center", justifyContent: "center" }}>
+        <View style={styles.grid}>
+          <Text style={styles.text}>$</Text>
+          <Text style={styles.title}>2.534</Text>
+          <Text style={styles.text}>.65</Text>
+        </View>
+        <Text style={styles.balanceText}>Available Balance</Text>
+      </View>
+
       <Modal title={"Today"} dataset={TRANSACTIONS} />
     </LinearGradient>
   );
@@ -31,5 +40,24 @@ export default HistoryView;
 const styles = StyleSheet.create({
   outline: {
     height: windowHeight
+  },
+  grid: {
+    flexDirection: "row",
+    alignItems: "baseline"
+  },
+  text: {
+    color: "white",
+    fontWeight: "700",
+    fontSize: COLORS.SUB_FONT_SIZE
+  },
+  title: {
+    color: "white",
+    fontSize: 58,
+    fontWeight: "700"
+  },
+  balanceText: {
+    fontWeight: "600",
+    color: "white",
+    fontSize: 14
   }
 });
