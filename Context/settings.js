@@ -51,6 +51,19 @@ export const PEOPLE = [
   }
 ];
 
+export const TRANSACTIONS = [
+  {
+    id: 1,
+    name: "Nike Shop",
+    description: "Clothing andFootware"
+  },
+  {
+    id: 2,
+    name: "McDonald's",
+    description: "Cafes and Restaurants"
+  }
+];
+
 import { Ionicons } from "react-native-vector-icons";
 export const APP_ICONS = {
   ADD: (

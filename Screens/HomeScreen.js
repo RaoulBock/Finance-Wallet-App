@@ -10,8 +10,15 @@ import {
 import React from "react";
 import HomeNav from "../Components/Nav/HomeNav";
 import Card from "../Components/Card/Card";
-import { APP_ICONS, COLORS, PEOPLE, WALLETS } from "../Context/settings";
+import {
+  APP_ICONS,
+  COLORS,
+  PEOPLE,
+  TRANSACTIONS,
+  WALLETS
+} from "../Context/settings";
 import PeopleCard from "../Components/Card/PeopleCard";
+import TransactionCard from "../Components/Card/TransactionCard";
 
 const HomeScreen = () => {
   return (
@@ -28,16 +35,30 @@ const HomeScreen = () => {
           })}
         </ScrollView>
       </View>
-      <View style={{ marginHorizontal: 10 }}>
+      <View style={{}}>
         <View style={styles.grid}>
           <Text style={styles.text}>Send money</Text>
-          <Text style={[styles.text, { color: COLORS.VIEW_MORE_COLOR }]}>
+          {/* <Text style={[styles.text, { color: COLORS.VIEW_MORE_COLOR }]}>
             View all
-          </Text>
+          </Text> */}
         </View>
         <ScrollView horizontal showsHorizontalScrollIndicator={false}>
           {PEOPLE.map((e, i) => {
             return <PeopleCard key={i} item={e} />;
+          })}
+        </ScrollView>
+      </View>
+
+      <View style={{ marginVertical: 25 }}>
+        <View style={styles.grid}>
+          <Text style={styles.text}>Transactions</Text>
+          <Text style={[styles.text, { color: COLORS.VIEW_MORE_COLOR }]}>
+            View all
+          </Text>
+        </View>
+        <ScrollView>
+          {TRANSACTIONS.map((e, i) => {
+            return <TransactionCard key={i} item={e} />;
           })}
         </ScrollView>
       </View>
@@ -61,6 +82,7 @@ const styles = StyleSheet.create({
   grid: {
     flexDirection: "row",
     alignItems: "center",
-    justifyContent: "space-between"
+    justifyContent: "space-between",
+    marginHorizontal: 10
   }
 });
