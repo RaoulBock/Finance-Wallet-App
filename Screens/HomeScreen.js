@@ -1,10 +1,11 @@
 import { StyleSheet, Text, View, Platform, StatusBar } from "react-native";
 import React from "react";
+import HomeNav from "../Components/Nav/HomeNav";
 
 const HomeScreen = () => {
   return (
     <View style={styles.outline}>
-      <Text>HomeScreen</Text>
+      <HomeNav username={"Raoul Bock"} />
     </View>
   );
 };
