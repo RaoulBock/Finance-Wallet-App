@@ -10,6 +10,7 @@ const AppProvider = ({ children }) => {
   const [navPage, setNavPage] = React.useState(APP_PAGES.APP.HOME);
   const [tab, setTab] = React.useState(0);
   const [currency, setCurrency] = React.useState("USD");
+  const [isModalVisible, setIsModalVisible] = React.useState(false);
 
   return (
     <AppContext.Provider
@@ -19,7 +20,9 @@ const AppProvider = ({ children }) => {
         tab,
         setTab,
         currency,
-        setCurrency
+        setCurrency,
+        isModalVisible,
+        setIsModalVisible
       }}
     >
       {children}

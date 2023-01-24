@@ -22,8 +22,12 @@ import { AppContext } from "../../Context/AppContext";
 const SettingsView = () => {
   const [isEnabled, setIsEnabled] = React.useState(false);
   const toggleSwitch = () => setIsEnabled((previousState) => !previousState);
-  const [isModalVisible, setIsModalVisible] = React.useState(false);
-  const { currency: item } = React.useContext(AppContext);
+
+  const {
+    currency: item,
+    isModalVisible,
+    setIsModalVisible
+  } = React.useContext(AppContext);
   return (
     <View>
       <HomeNav username={"Raoul Bock"} />

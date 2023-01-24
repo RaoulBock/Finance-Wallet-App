@@ -4,9 +4,15 @@ import { COLORS } from "../../Context/settings";
 import { AppContext } from "../../Context/AppContext";
 
 const List = ({ item }) => {
-  const { setCurrency } = React.useContext(AppContext);
+  const { setCurrency, setIsModalVisible } = React.useContext(AppContext);
   return (
-    <TouchableOpacity activeOpacity={1} onPress={() => setCurrency(item)}>
+    <TouchableOpacity
+      activeOpacity={1}
+      onPress={() => {
+        setCurrency(item);
+        setIsModalVisible(false);
+      }}
+    >
       <Text style={styles.title}>{item.name}</Text>
     </TouchableOpacity>
   );
