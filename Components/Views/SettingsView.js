@@ -31,7 +31,11 @@ const SettingsView = () => {
           <Text style={styles.text}>Back up & Security</Text>
         </View>
         <ScrollView>
-          <View style={[styles.grid, styles.sep]}>
+          <TouchableOpacity
+            style={[styles.grid, styles.sep]}
+            onPress={toggleSwitch}
+            activeOpacity={1}
+          >
             <Text style={styles.title}>Cloud backup</Text>
             <Switch
               trackColor={{ false: "#767577", true: "#81b0ff" }}
@@ -40,13 +44,17 @@ const SettingsView = () => {
               onValueChange={toggleSwitch}
               value={isEnabled}
             />
-          </View>
-          <View style={[styles.grid, styles.sep, { paddingVertical: 10 }]}>
+          </TouchableOpacity>
+          <TouchableOpacity
+            style={[styles.grid, styles.sep, { paddingVertical: 10 }]}
+            onPress={() => setIsModalVisible(true)}
+            activeOpacity={1}
+          >
             <Text style={styles.title}>App Preferences</Text>
-            <TouchableOpacity onPress={() => setIsModalVisible(true)}>
+            <TouchableOpacity>
               <Text style={styles.text}>NAM</Text>
             </TouchableOpacity>
-          </View>
+          </TouchableOpacity>
           <Modal
             animationType="slide"
             transparent={false}
