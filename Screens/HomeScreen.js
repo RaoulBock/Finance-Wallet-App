@@ -35,7 +35,7 @@ const HomeScreen = () => {
           })}
         </ScrollView>
       </View>
-      <View style={{}}>
+      <View style={{ marginBottom: 25 }}>
         <View style={styles.grid}>
           <Text style={styles.text}>Send money</Text>
           {/* <Text style={[styles.text, { color: COLORS.VIEW_MORE_COLOR }]}>
@@ -49,7 +49,7 @@ const HomeScreen = () => {
         </ScrollView>
       </View>
 
-      <View style={{ marginVertical: 25 }}>
+      <View style={{}}>
         <View style={styles.grid}>
           <Text style={styles.text}>Transactions</Text>
           <Text style={[styles.text, { color: COLORS.VIEW_MORE_COLOR }]}>

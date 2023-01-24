@@ -12,7 +12,8 @@ export const COLORS = {
   MAIN_FONT_SIZE: 38,
   LOSE_COLOR: "#fc6d77",
   GAIN_COLOR: "#4cdbb5",
-  VIEW_MORE_COLOR: "#5680f5"
+  VIEW_MORE_COLOR: "#5680f5",
+  BACKGROUND_ICON: "#f7f9fb"
 };
 
 export const WALLETS = [
@@ -55,12 +56,14 @@ export const TRANSACTIONS = [
   {
     id: 1,
     name: "Nike Shop",
-    description: "Clothing andFootware"
+    description: "Clothing and Footware",
+    icon: require("../Components/Icons/nike.png")
   },
   {
     id: 2,
     name: "McDonald's",
-    description: "Cafes and Restaurants"
+    description: "Cafes and Restaurants",
+    icon: require("../Components/Icons/mcdonalds.png")
   }
 ];
 
