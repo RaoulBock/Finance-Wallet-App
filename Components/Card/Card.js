@@ -48,7 +48,7 @@ const styles = StyleSheet.create({
   },
   title: {
     color: "white",
-    fontSize: COLORS.MAIN_FONT_SIZE,
+    fontSize: 58,
     fontWeight: "700"
   }
 });

@@ -34,7 +34,7 @@ const SettingsView = () => {
 
       <View style={{ marginVertical: 20 }}>
         <View style={styles.grid}>
-          <Text style={styles.text}>Back up & Security</Text>
+          <Text style={styles.text}>Settings</Text>
         </View>
         <ScrollView>
           <TouchableOpacity
@@ -45,7 +45,7 @@ const SettingsView = () => {
             <Text style={styles.title}>Cloud backup</Text>
             <Switch
               trackColor={{ false: "#767577", true: "#81b0ff" }}
-              thumbColor={isEnabled ? "#f5dd4b" : "#f4f3f4"}
+              thumbColor={isEnabled ? "#f5dd4b" : "#767577"}
               ios_backgroundColor="#3e3e3e"
               onValueChange={toggleSwitch}
               value={isEnabled}
@@ -68,7 +68,7 @@ const SettingsView = () => {
             onRequestClose={() => setIsModalVisible(false)}
             style={{ height: 200 }}
           >
-            <View style={{ margin: 15 }}>
+            <View style={{ marginHorizontal: 10 }}>
               <View style={styles.main}>
                 <Text style={styles.text}>Select your preferred currency</Text>
                 <TouchableOpacity
