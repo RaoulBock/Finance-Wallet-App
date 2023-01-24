@@ -13,7 +13,7 @@ const Card = ({ item }) => {
       style={styles.outline}
     >
       <View style={{ flex: 1 }}>
-        <Text style={styles.title}>{item.name}</Text>
+        <Text style={[styles.title, { fontSize: 18 }]}>{item.name}</Text>
       </View>
       <View style={styles.grid}>
         <Text style={styles.text}>$</Text>
@@ -35,20 +35,20 @@ const styles = StyleSheet.create({
     borderRadius: 15,
     padding: 20,
     width: 300,
-    marginHorizontal: 10,
+    marginHorizontal: 10
   },
   grid: {
     flexDirection: "row",
-    alignItems: "baseline",
+    alignItems: "baseline"
   },
   text: {
     color: "white",
     fontWeight: "700",
-    fontSize: COLORS.SUB_FONT_SIZE,
+    fontSize: COLORS.SUB_FONT_SIZE
   },
   title: {
     color: "white",
     fontSize: COLORS.MAIN_FONT_SIZE,
-    fontWeight: "700",
-  },
+    fontWeight: "700"
+  }
 });
