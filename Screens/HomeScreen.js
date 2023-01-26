@@ -15,7 +15,8 @@ import {
   COLORS,
   PEOPLE,
   TRANSACTIONS,
-  WALLETS
+  WALLETS,
+  RefreshControl
 } from "../Context/settings";
 import PeopleCard from "../Components/Card/PeopleCard";
 import TransactionCard from "../Components/Card/TransactionCard";
@@ -29,6 +30,7 @@ import SettingsView from "../Components/Views/SettingsView";
 
 const HomeScreen = () => {
   const { tab } = React.useContext(AppContext);
+
   return (
     <View style={styles.outline}>
       <ScrollView>

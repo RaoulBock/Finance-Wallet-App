@@ -79,7 +79,7 @@ export const TRANSACTIONS = [
   },
   {
     id: 4,
-    name: "McDonald's",
+    name: "PayPal",
     description: "Cafes and Restaurants",
     icon: require("../Components/Icons/paypal.png"),
     price: "500.60",
